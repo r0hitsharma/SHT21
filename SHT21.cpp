@@ -21,11 +21,10 @@
 
 SHT21::SHT21 () {}
 
-void SHT21::begin(void){
-		
-		Wire.begin();  
-				
-	}
+boolean SHT21::begin(void){
+	Wire.begin(); 
+  if (Wire.endTransmission(true) != 0) return false;
+}
 	
 float SHT21::getHumidity(void)
 

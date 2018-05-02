@@ -32,7 +32,7 @@ class SHT21 {
 public:
   SHT21();
 	
-  void begin();
+  boolean begin();
   float getHumidity(void);
   float getTemperature(void);
   	
